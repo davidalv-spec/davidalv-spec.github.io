@@ -78,6 +78,19 @@ section.dark .fn{color:#a9a395}
 .cnum{text-align:center;font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;font-size:12.5px;color:var(--mut);margin-top:6px}
 section.dark .cnum{color:#a9a395}
 @media(max-width:700px){.ctrack figure.slide img{height:calc(var(--h)*.62)}.cprev,.cnext{display:none}.ctrack{gap:14px}}
+.cred{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:20px;max-width:1000px}
+.cred.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.ccard{display:flex;gap:16px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:20px}
+.lg{position:relative;flex:0 0 64px;width:64px;height:64px;border-radius:10px;background:var(--dark);color:#d1ad63;display:flex;align-items:center;justify-content:center;text-align:center;font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;font-size:10.5px;font-weight:700;line-height:1.15;letter-spacing:.02em;padding:4px;overflow:hidden}
+.lg img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:transparent;padding:6px;border-radius:0;cursor:default}.lg.has span{display:none}
+.ct{min-width:0;font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif}
+.ct h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+.ct .iss{font-size:14px;color:var(--mut);margin:0 0 10px}
+.ct .meta{font-size:13px;color:var(--ink);margin:2px 0;max-width:none}
+.ct .meta span{color:var(--mut)}
+.chip{display:inline-block;font-size:11.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--acc);border:1px solid var(--acc);border-radius:20px;padding:1px 9px;margin-top:8px}
+@media(max-width:900px){.cred{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.cred,.cred.two{grid-template-columns:1fr}}
 .frow{display:flex;gap:16px;align-items:flex-start;max-width:900px;margin-top:20px}
 @media(max-width:640px){.frow{flex-wrap:wrap}.frow figure{flex:1 1 45%!important}}
 .row{display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start;margin-top:28px}.row figure{display:table}.row figure img{height:400px;width:auto;max-width:100%}.row figcaption{display:table-caption;caption-side:bottom}
@@ -90,7 +103,7 @@ footer{padding:40px 0;font-size:13px;color:var(--mut);font-family:-apple-system,
 </style>
 </head>
 <body>
-<nav><div class="wrap"><b>David Alvarado</b><a href="#about">About</a><a href="#mckinsey">McKinsey</a><a href="#pivot">Pivot</a><a href="#idols">Idols</a><a href="#architecture">Architecture</a><a href="#contact">Contact</a></div></nav>
+<nav><div class="wrap"><b>David Alvarado</b><a href="#about">About</a><a href="#mckinsey">McKinsey</a><a href="#pivot">Pivot</a><a href="#idols">Idols</a><a href="#architecture">Architecture</a><a href="#education">Education</a><a href="#contact">Contact</a></div></nav>
 
 <header class="hero"><div class="wrap">
 <div class="tag">Portfolio</div>
@@ -108,7 +121,7 @@ footer{padding:40px 0;font-size:13px;color:var(--mut);font-family:-apple-system,
 <div class="tag">About</div>
 <h2>How I work</h2>
 <p>I started at McKinsey as a Business Presentation Designer and grew into Team Manager of the Visual Graphics &amp; Media function, directing a 90-person hub in Costa Rica through six Team Leaders. As Production Team Leader I led about 15 designers on work that went well beyond presentations. Outside of that, I trained as an architect, and I now build brands and content systems.</p>
-<p>Architecture degree (2018). MBA in progress, expected 2027. Google Generative AI Leader certified. Native Spanish, fluent English.</p>
+<p>Native Spanish, fluent English. Education and certifications are in their own section at the end.</p>
 <p>This page covers four things: what my teams produced at McKinsey, work I designed for Pivot, the brand system and AI-assisted content I built for Idols, and my architecture thesis. Where I used AI tools, I say which ones and for what.</p>
 </div></section>
 
@@ -219,6 +232,25 @@ footer{padding:40px 0;font-size:13px;color:var(--mut);font-family:-apple-system,
 </div><button class="cnext" type="button" aria-label="Next">&#8250;</button><div class="cnum" aria-live="polite"></div></div>
 </div></section>
 
+<section id="education"><div class="wrap">
+<div class="tag">Education</div>
+<h2>Education and certifications</h2>
+<h3>Degrees</h3>
+<div class="cred two">
+<div class="ccard"><div class="lg"><img src="logo-ulacit.png" alt="" onload="this.parentNode.classList.add('has')" onerror="this.remove()">ULACIT</div><div class="ct"><h3>MBA, Finance Emphasis</h3><p class="iss">Universidad Latinoamericana de Ciencia y Tecnología</p><p class="meta"><span>Dates:</span> Oct 2023 &ndash; expected 2027</p><span class="chip">In progress</span></div></div>
+<div class="ccard"><div class="lg"><img src="logo-ulatina.png" alt="" onload="this.parentNode.classList.add('has')" onerror="this.remove()">ULatina</div><div class="ct"><h3>Licenciatura in Architecture</h3><p class="iss">Universidad Latina de Costa Rica</p><p class="meta"><span>Completed:</span> 2018</p><p class="meta"><span>Thesis:</span> <a href="#architecture">MORPH</a></p><span class="chip">Completed</span></div></div>
+</div>
+<h3>Certifications</h3>
+<div class="cred">
+<div class="ccard"><div class="lg"><img src="logo-scrumorg.png" alt="" onload="this.parentNode.classList.add('has')" onerror="this.remove()">Scrum.org</div><div class="ct"><h3>Professional Scrum Master I (PSM I)</h3><p class="iss">Scrum.org</p><p class="meta"><span>Issued:</span> May 2026</p><p class="meta"><span>Valid:</span> Lifelong, no renewal</p></div></div>
+<div class="ccard"><div class="lg"><img src="logo-google.png" alt="" onload="this.parentNode.classList.add('has')" onerror="this.remove()">Google</div><div class="ct"><h3>Generative AI Leader</h3><p class="iss">Google</p><p class="meta"><span>Issued:</span> Nov 2025</p><p class="meta"><span>Valid through:</span> Nov 2028</p></div></div>
+<div class="ccard"><div class="lg"><img src="logo-microsoft.png" alt="" onload="this.parentNode.classList.add('has')" onerror="this.remove()">Microsoft</div><div class="ct"><h3>Microsoft AI Product Manager</h3><p class="iss">Microsoft / Coursera</p><p class="meta"><span>Status:</span> Ongoing</p><p class="meta"><span>Valid:</span> Not yet issued</p><span class="chip">In progress</span></div></div>
+<div class="ccard"><div class="lg"><img src="logo-icagile.png" alt="" onload="this.parentNode.classList.add('has')" onerror="this.remove()">ICAgile</div><div class="ct"><h3>Agile Team Facilitation (ICP-ATF)</h3><p class="iss">ICAgile</p><p class="meta"><span>Issued:</span> Dec 2020</p><p class="meta"><span>Valid:</span> No expiration</p></div></div>
+<div class="ccard"><div class="lg"><img src="logo-scrumalliance.png" alt="" onload="this.parentNode.classList.add('has')" onerror="this.remove()">Scrum Alliance</div><div class="ct"><h3>Certified Agile Leadership (CAL)</h3><p class="iss">Scrum Alliance</p><p class="meta"><span>Issued:</span> Feb 2020</p><p class="meta"><span>Valid:</span> No expiration</p></div></div>
+<div class="ccard"><div class="lg"><img src="logo-linkedinlearning.png" alt="" onload="this.parentNode.classList.add('has')" onerror="this.remove()">LinkedIn Learning</div><div class="ct"><h3>Lean Six Sigma Foundations</h3><p class="iss">LinkedIn Learning</p><p class="meta"><span>Issued:</span> Feb 2020</p><p class="meta"><span>Valid:</span> Certificate of completion</p></div></div>
+</div>
+</div></section>
+
 <section id="contact"><div class="wrap">
 <div class="tag">Contact</div>
 <h2>Get in touch</h2>
@@ -236,16 +268,21 @@ lb.addEventListener('click',function(){lb.style.display='none'});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.style.display='none'});
 document.querySelectorAll('figure img').forEach(function(i){if(!i.closest('.car')){i.addEventListener('click',function(){openLb(i)})}});
 document.querySelectorAll('.car').forEach(function(car){
- var tr=car.querySelector('.ctrack'),sl=[].slice.call(tr.querySelectorAll('.slide')),pv=car.querySelector('.cprev'),nx=car.querySelector('.cnext'),nm=car.querySelector('.cnum'),cur=0,raf=0;
- function pad(){var w=tr.clientWidth;sl[0].style.marginLeft=Math.max(0,(w-sl[0].offsetWidth)/2)+'px';sl[sl.length-1].style.marginRight=Math.max(0,(w-sl[sl.length-1].offsetWidth)/2)+'px'}
- function go(k,smooth){k=Math.max(0,Math.min(sl.length-1,k));var s=sl[k];var L=s.offsetLeft+s.offsetWidth/2-tr.clientWidth/2;if(tr.scrollTo){tr.scrollTo({left:L,behavior:smooth===false?'auto':'smooth'})}else{tr.scrollLeft=L}}
- function mark(){var c=tr.scrollLeft+tr.clientWidth/2,best=0,bd=1e9;sl.forEach(function(s,k){var d=Math.abs(s.offsetLeft+s.offsetWidth/2-c);if(d<bd){bd=d;best=k}});cur=best;sl.forEach(function(s,k){s.classList.toggle('on',k===best)});pv.disabled=best===0;nx.disabled=best===sl.length-1;nm.textContent=(best+1)+' / '+sl.length}
- tr.addEventListener('scroll',function(){cancelAnimationFrame(raf);raf=requestAnimationFrame(mark)});
+ var tr=car.querySelector('.ctrack'),orig=[].slice.call(tr.querySelectorAll('.slide')),N=orig.length,pv=car.querySelector('.cprev'),nx=car.querySelector('.cnext'),nm=car.querySelector('.cnum'),sl,cur=N,raf=0,idle=0;
+ function mk(s){var c=s.cloneNode(true);c.classList.remove('on');c.setAttribute('aria-hidden','true');return c}
+ var first=orig[0];orig.forEach(function(s){tr.insertBefore(mk(s),first)});orig.forEach(function(s){tr.appendChild(mk(s))});
+ sl=[].slice.call(tr.querySelectorAll('.slide'));
+ function cx(s){return s.offsetLeft+s.offsetWidth/2-tr.clientWidth/2}
+ function setW(){return sl[N].offsetLeft-sl[0].offsetLeft}
+ function go(k,smooth){k=Math.max(0,Math.min(sl.length-1,k));var L=cx(sl[k]);if(smooth!==false&&tr.scrollTo){tr.scrollTo({left:L,behavior:'smooth'})}else{tr.scrollLeft=L}}
+ function mark(){var c=tr.scrollLeft+tr.clientWidth/2,best=0,bd=1e9;sl.forEach(function(s,k){var d=Math.abs(s.offsetLeft+s.offsetWidth/2-c);if(d<bd){bd=d;best=k}});cur=best;sl.forEach(function(s,k){s.classList.toggle('on',k===best)});nm.textContent=((best%N)+1)+' / '+N}
+ function wrap(){var w=setW();if(cur<N){tr.scrollLeft+=w}else if(cur>=2*N){tr.scrollLeft-=w}mark()}
+ tr.addEventListener('scroll',function(){cancelAnimationFrame(raf);raf=requestAnimationFrame(mark);clearTimeout(idle);idle=setTimeout(wrap,140)});
  pv.addEventListener('click',function(){go(cur-1)});nx.addEventListener('click',function(){go(cur+1)});
  tr.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){e.preventDefault();go(cur+1)}if(e.key==='ArrowLeft'){e.preventDefault();go(cur-1)}});
- sl.forEach(function(s,k){s.querySelector('img').addEventListener('click',function(){if(k===cur){openLb(this)}else{go(k)}})});
- function init(){pad();mark();tr.scrollLeft=0;go(0,false);mark()}
- window.addEventListener('load',init);window.addEventListener('resize',function(){pad();go(cur,false);mark()});init();
+ sl.forEach(function(s,k){s.querySelector('img').addEventListener('click',function(){if(s.classList.contains('on')){openLb(this)}else{go(k)}})});
+ function init(){go(N,false);mark()}
+ window.addEventListener('load',init);window.addEventListener('resize',function(){go(cur,false);mark()});init();
 });
 </script>
 </body>
