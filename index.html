@@ -91,6 +91,22 @@ section.dark .cnum{color:#a9a395}
 .chip{display:inline-block;font-size:11.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--acc);border:1px solid var(--acc);border-radius:20px;padding:1px 9px;margin-top:8px}
 @media(max-width:900px){.cred{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.cred,.cred.two{grid-template-columns:1fr}}
+.sgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 36px;max-width:1000px;margin-top:14px;font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif}
+.sgrid.three{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.sgrid.three .scard{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:8px 20px 12px}
+.sgrid.three .scard h4{margin:12px 0 4px;font-size:14px;letter-spacing:.04em;text-transform:uppercase;color:var(--acc)}
+.srow{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:9px 0;border-bottom:1px solid var(--line)}
+.sgrid.three .srow:last-child{border-bottom:0}
+.sn{font-size:15px;font-weight:600;line-height:1.3}
+.se{display:block;font-size:12.5px;font-weight:400;color:var(--mut);margin-top:2px}
+.sl{display:flex;flex-direction:column;align-items:flex-end;gap:5px;flex:0 0 auto}
+.sl em{font-style:normal;font-size:12px;color:var(--mut);white-space:nowrap}
+.meter{display:flex;gap:4px}
+.meter i{display:block;width:20px;height:6px;border-radius:3px;background:var(--acc)}
+.m1 i:nth-child(n+2),.m2 i:nth-child(n+3),.m3 i:nth-child(n+4){background:var(--line)}
+.d3 i:nth-child(n+4),.d4 i:nth-child(n+5){background:var(--line)}
+.legend{font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;font-size:12.5px;color:var(--mut);margin:6px 0 0}
+@media(max-width:800px){.sgrid,.sgrid.three{grid-template-columns:1fr}}
 .frow{display:flex;gap:16px;align-items:flex-start;max-width:900px;margin-top:20px}
 @media(max-width:640px){.frow{flex-wrap:wrap}.frow figure{flex:1 1 45%!important}}
 .row{display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start;margin-top:28px}.row figure{display:table}.row figure img{height:400px;width:auto;max-width:100%}.row figcaption{display:table-caption;caption-side:bottom}
@@ -103,7 +119,7 @@ footer{padding:40px 0;font-size:13px;color:var(--mut);font-family:-apple-system,
 </style>
 </head>
 <body>
-<nav><div class="wrap"><b>David Alvarado</b><a href="#about">About</a><a href="#mckinsey">McKinsey</a><a href="#pivot">Pivot</a><a href="#idols">Idols</a><a href="#architecture">Architecture</a><a href="#education">Education</a><a href="#contact">Contact</a></div></nav>
+<nav><div class="wrap"><b>David Alvarado</b><a href="#about">About</a><a href="#mckinsey">McKinsey</a><a href="#pivot">Pivot</a><a href="#idols">Idols</a><a href="#architecture">Architecture</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div></nav>
 
 <header class="hero"><div class="wrap">
 <div class="tag">Portfolio</div>
@@ -237,17 +253,44 @@ footer{padding:40px 0;font-size:13px;color:var(--mut);font-family:-apple-system,
 <h2>Education and certifications</h2>
 <h3>Degrees</h3>
 <div class="cred two">
-<div class="ccard"><div class="lg"><img src="logo-ulacit.png" alt="" onload="this.parentNode.classList.add('has')" onerror="this.remove()">ULACIT</div><div class="ct"><h3>MBA, Finance Emphasis</h3><p class="iss">Universidad Latinoamericana de Ciencia y Tecnología</p><p class="meta"><span>Dates:</span> Oct 2023 &ndash; expected 2027</p><span class="chip">In progress</span></div></div>
-<div class="ccard"><div class="lg"><img src="logo-ulatina.png" alt="" onload="this.parentNode.classList.add('has')" onerror="this.remove()">ULatina</div><div class="ct"><h3>Licenciatura in Architecture</h3><p class="iss">Universidad Latina de Costa Rica</p><p class="meta"><span>Completed:</span> 2018</p><p class="meta"><span>Thesis:</span> <a href="#architecture">MORPH</a></p><span class="chip">Completed</span></div></div>
+<div class="ccard"><div class="lg"><img src="logo-ulacit.png" alt="" onload="this.parentNode.classList.add('has')" onerror="this.remove()"><span>ULACIT</span></div><div class="ct"><h3>MBA, Finance Emphasis</h3><p class="iss">Universidad Latinoamericana de Ciencia y Tecnología</p><p class="meta"><span>Dates:</span> Oct 2023 &ndash; expected 2027</p><span class="chip">In progress</span></div></div>
+<div class="ccard"><div class="lg"><img src="logo-ulatina.png" alt="" onload="this.parentNode.classList.add('has')" onerror="this.remove()"><span>ULatina</span></div><div class="ct"><h3>Licenciatura in Architecture</h3><p class="iss">Universidad Latina de Costa Rica</p><p class="meta"><span>Completed:</span> 2018</p><p class="meta"><span>Thesis:</span> <a href="#architecture">MORPH</a></p><span class="chip">Completed</span></div></div>
 </div>
 <h3>Certifications</h3>
 <div class="cred">
-<div class="ccard"><div class="lg"><img src="logo-scrumorg.png" alt="" onload="this.parentNode.classList.add('has')" onerror="this.remove()">Scrum.org</div><div class="ct"><h3>Professional Scrum Master I (PSM I)</h3><p class="iss">Scrum.org</p><p class="meta"><span>Issued:</span> May 2026</p><p class="meta"><span>Valid:</span> Lifelong, no renewal</p></div></div>
-<div class="ccard"><div class="lg"><img src="logo-google.png" alt="" onload="this.parentNode.classList.add('has')" onerror="this.remove()">Google</div><div class="ct"><h3>Generative AI Leader</h3><p class="iss">Google</p><p class="meta"><span>Issued:</span> Nov 2025</p><p class="meta"><span>Valid through:</span> Nov 2028</p></div></div>
-<div class="ccard"><div class="lg"><img src="logo-microsoft.png" alt="" onload="this.parentNode.classList.add('has')" onerror="this.remove()">Microsoft</div><div class="ct"><h3>Microsoft AI Product Manager</h3><p class="iss">Microsoft / Coursera</p><p class="meta"><span>Status:</span> Ongoing</p><p class="meta"><span>Valid:</span> Not yet issued</p><span class="chip">In progress</span></div></div>
-<div class="ccard"><div class="lg"><img src="logo-icagile.png" alt="" onload="this.parentNode.classList.add('has')" onerror="this.remove()">ICAgile</div><div class="ct"><h3>Agile Team Facilitation (ICP-ATF)</h3><p class="iss">ICAgile</p><p class="meta"><span>Issued:</span> Dec 2020</p><p class="meta"><span>Valid:</span> No expiration</p></div></div>
-<div class="ccard"><div class="lg"><img src="logo-scrumalliance.png" alt="" onload="this.parentNode.classList.add('has')" onerror="this.remove()">Scrum Alliance</div><div class="ct"><h3>Certified Agile Leadership (CAL)</h3><p class="iss">Scrum Alliance</p><p class="meta"><span>Issued:</span> Feb 2020</p><p class="meta"><span>Valid:</span> No expiration</p></div></div>
-<div class="ccard"><div class="lg"><img src="logo-linkedinlearning.png" alt="" onload="this.parentNode.classList.add('has')" onerror="this.remove()">LinkedIn Learning</div><div class="ct"><h3>Lean Six Sigma Foundations</h3><p class="iss">LinkedIn Learning</p><p class="meta"><span>Issued:</span> Feb 2020</p><p class="meta"><span>Valid:</span> Certificate of completion</p></div></div>
+<div class="ccard"><div class="lg"><img src="logo-scrumorg.png" alt="" onload="this.parentNode.classList.add('has')" onerror="this.remove()"><span>Scrum.org</span></div><div class="ct"><h3>Professional Scrum Master I (PSM I)</h3><p class="iss">Scrum.org</p><p class="meta"><span>Issued:</span> May 2026</p><p class="meta"><span>Valid:</span> Lifelong, no renewal</p></div></div>
+<div class="ccard"><div class="lg"><img src="logo-google.png" alt="" onload="this.parentNode.classList.add('has')" onerror="this.remove()"><span>Google</span></div><div class="ct"><h3>Generative AI Leader</h3><p class="iss">Google</p><p class="meta"><span>Issued:</span> Nov 2025</p><p class="meta"><span>Valid through:</span> Nov 2028</p></div></div>
+<div class="ccard"><div class="lg"><img src="logo-microsoft.png" alt="" onload="this.parentNode.classList.add('has')" onerror="this.remove()"><span>Microsoft</span></div><div class="ct"><h3>Microsoft AI Product Manager</h3><p class="iss">Microsoft / Coursera</p><p class="meta"><span>Status:</span> Ongoing</p><p class="meta"><span>Valid:</span> Not yet issued</p><span class="chip">In progress</span></div></div>
+<div class="ccard"><div class="lg"><img src="logo-icagile.png" alt="" onload="this.parentNode.classList.add('has')" onerror="this.remove()"><span>ICAgile</span></div><div class="ct"><h3>Agile Team Facilitation (ICP-ATF)</h3><p class="iss">ICAgile</p><p class="meta"><span>Issued:</span> Dec 2020</p><p class="meta"><span>Valid:</span> No expiration</p></div></div>
+<div class="ccard"><div class="lg"><img src="logo-scrumalliance.png" alt="" onload="this.parentNode.classList.add('has')" onerror="this.remove()"><span>Scrum Alliance</span></div><div class="ct"><h3>Certified Agile Leadership (CAL)</h3><p class="iss">Scrum Alliance</p><p class="meta"><span>Issued:</span> Feb 2020</p><p class="meta"><span>Valid:</span> No expiration</p></div></div>
+<div class="ccard"><div class="lg"><img src="logo-linkedinlearning.png" alt="" onload="this.parentNode.classList.add('has')" onerror="this.remove()"><span>LinkedIn Learning</span></div><div class="ct"><h3>Lean Six Sigma Foundations</h3><p class="iss">LinkedIn Learning</p><p class="meta"><span>Issued:</span> Feb 2020</p><p class="meta"><span>Valid:</span> Certificate of completion</p></div></div>
+</div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+<div class="tag">Skills</div>
+<h2>Skills, tools and languages</h2>
+<p class="legend">Levels: Expert &middot; Advanced &middot; Proficient &middot; Working knowledge</p>
+<h3>Core skills</h3>
+<div class="sgrid">
+<div class="srow"><div class="sn">Team leadership and people development<span class="se">7+ years leading teams; 6 Team Leaders, 90+ specialists</span></div><div class="sl"><em>Expert</em><span class="meter m4"><i></i><i></i><i></i><i></i></span></div></div>
+<div class="srow"><div class="sn">Service delivery and SLA governance<span class="se">Team Manager, 2020 to 2023</span></div><div class="sl"><em>Expert</em><span class="meter m4"><i></i><i></i><i></i><i></i></span></div></div>
+<div class="srow"><div class="sn">Executive presentation design<span class="se">9 years at McKinsey</span></div><div class="sl"><em>Expert</em><span class="meter m4"><i></i><i></i><i></i><i></i></span></div></div>
+<div class="srow"><div class="sn">Capacity planning and resource allocation<span class="se">90-person hub; planning team scaled from 7 to 15</span></div><div class="sl"><em>Advanced</em><span class="meter m3"><i></i><i></i><i></i><i></i></span></div></div>
+<div class="srow"><div class="sn">Process improvement (Lean / Kaizen)<span class="se">SOPs across three hubs; Lean Six Sigma Foundations</span></div><div class="sl"><em>Advanced</em><span class="meter m3"><i></i><i></i><i></i><i></i></span></div></div>
+<div class="srow"><div class="sn">KPI design and reporting<span class="se">Power BI dashboards; KPIs where none existed</span></div><div class="sl"><em>Advanced</em><span class="meter m3"><i></i><i></i><i></i><i></i></span></div></div>
+<div class="srow"><div class="sn">Stakeholder and escalation management<span class="se">Engagement Managers, Directors, Senior Partners</span></div><div class="sl"><em>Advanced</em><span class="meter m3"><i></i><i></i><i></i><i></i></span></div></div>
+<div class="srow"><div class="sn">Program and PMO coordination<span class="se">Intake, workplans, milestones, handovers</span></div><div class="sl"><em>Advanced</em><span class="meter m3"><i></i><i></i><i></i><i></i></span></div></div>
+<div class="srow"><div class="sn">Brand identity and creative direction<span class="se">Pivot and Idols brand systems</span></div><div class="sl"><em>Advanced</em><span class="meter m3"><i></i><i></i><i></i><i></i></span></div></div>
+<div class="srow"><div class="sn">B2B client account management<span class="se">Enterprise accounts at Pivot: proposals, renewals</span></div><div class="sl"><em>Proficient</em><span class="meter m2"><i></i><i></i><i></i><i></i></span></div></div>
+</div>
+<h3>Tools</h3>
+<div class="sgrid three">
+<div class="scard"><h4>Operations, data and commerce</h4><div class="srow"><div class="sn">Monday.com</div><div class="sl"><em>Expert</em><span class="meter m4"><i></i><i></i><i></i><i></i></span></div></div><div class="srow"><div class="sn">Power BI</div><div class="sl"><em>Advanced</em><span class="meter m3"><i></i><i></i><i></i><i></i></span></div></div><div class="srow"><div class="sn">Microsoft Office</div><div class="sl"><em>Advanced</em><span class="meter m3"><i></i><i></i><i></i><i></i></span></div></div><div class="srow"><div class="sn">ServiceNow</div><div class="sl"><em>Proficient</em><span class="meter m2"><i></i><i></i><i></i><i></i></span></div></div><div class="srow"><div class="sn">Shopify</div><div class="sl"><em>Proficient</em><span class="meter m2"><i></i><i></i><i></i><i></i></span></div></div><div class="srow"><div class="sn">Google Workspace</div><div class="sl"><em>Proficient</em><span class="meter m2"><i></i><i></i><i></i><i></i></span></div></div><div class="srow"><div class="sn">Slack</div><div class="sl"><em>Proficient</em><span class="meter m2"><i></i><i></i><i></i><i></i></span></div></div><div class="srow"><div class="sn">Jira / Confluence</div><div class="sl"><em>Working knowledge</em><span class="meter m1"><i></i><i></i><i></i><i></i></span></div></div></div><div class="scard"><h4>Design and production</h4><div class="srow"><div class="sn">PowerPoint</div><div class="sl"><em>Advanced</em><span class="meter m3"><i></i><i></i><i></i><i></i></span></div></div><div class="srow"><div class="sn">Photoshop</div><div class="sl"><em>Advanced</em><span class="meter m3"><i></i><i></i><i></i><i></i></span></div></div><div class="srow"><div class="sn">Illustrator</div><div class="sl"><em>Advanced</em><span class="meter m3"><i></i><i></i><i></i><i></i></span></div></div><div class="srow"><div class="sn">InDesign</div><div class="sl"><em>Advanced</em><span class="meter m3"><i></i><i></i><i></i><i></i></span></div></div><div class="srow"><div class="sn">Figma</div><div class="sl"><em>Proficient</em><span class="meter m2"><i></i><i></i><i></i><i></i></span></div></div><div class="srow"><div class="sn">Final Cut Pro</div><div class="sl"><em>Proficient</em><span class="meter m2"><i></i><i></i><i></i><i></i></span></div></div><div class="srow"><div class="sn">Premiere</div><div class="sl"><em>Proficient</em><span class="meter m2"><i></i><i></i><i></i><i></i></span></div></div><div class="srow"><div class="sn">SketchUp</div><div class="sl"><em>Proficient</em><span class="meter m2"><i></i><i></i><i></i><i></i></span></div></div></div><div class="scard"><h4>AI and automation</h4><div class="srow"><div class="sn">Claude</div><div class="sl"><em>Advanced</em><span class="meter m3"><i></i><i></i><i></i><i></i></span></div></div><div class="srow"><div class="sn">Monday.com automation</div><div class="sl"><em>Advanced</em><span class="meter m3"><i></i><i></i><i></i><i></i></span></div></div><div class="srow"><div class="sn">Claude Design</div><div class="sl"><em>Proficient</em><span class="meter m2"><i></i><i></i><i></i><i></i></span></div></div><div class="srow"><div class="sn">Gemini</div><div class="sl"><em>Proficient</em><span class="meter m2"><i></i><i></i><i></i><i></i></span></div></div><div class="srow"><div class="sn">Nano Banana</div><div class="sl"><em>Proficient</em><span class="meter m2"><i></i><i></i><i></i><i></i></span></div></div><div class="srow"><div class="sn">Midjourney</div><div class="sl"><em>Proficient</em><span class="meter m2"><i></i><i></i><i></i><i></i></span></div></div><div class="srow"><div class="sn">Veo</div><div class="sl"><em>Working knowledge</em><span class="meter m1"><i></i><i></i><i></i><i></i></span></div></div><div class="srow"><div class="sn">Python (AI-assisted)</div><div class="sl"><em>Working knowledge</em><span class="meter m1"><i></i><i></i><i></i><i></i></span></div></div></div>
+</div>
+<h3>Languages</h3>
+<div class="sgrid three">
+<div class="scard"><div class="srow" style="border:0"><div class="sn">Spanish<span class="se">Mother tongue</span></div><div class="sl"><em>Native</em><span class="meter d5"><i></i><i></i><i></i><i></i><i></i></span></div></div></div><div class="scard"><div class="srow" style="border:0"><div class="sn">English<span class="se">C1/C2</span></div><div class="sl"><em>Fluent</em><span class="meter d4"><i></i><i></i><i></i><i></i><i></i></span></div></div></div><div class="scard"><div class="srow" style="border:0"><div class="sn">Italian<span class="se">Conversational</span></div><div class="sl"><em>Intermediate</em><span class="meter d3"><i></i><i></i><i></i><i></i><i></i></span></div></div></div>
 </div>
 </div></section>
 
